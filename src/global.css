@@ -1,0 +1,9 @@
+body{
+  margin:0;
+  padding:0;
+  background: rgb(77, 77, 77);
+}
+
+.ScaryStyleFont{
+  font-family: 'Creepster', cursive;
+}

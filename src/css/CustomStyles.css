@@ -1,0 +1,49 @@
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4d4d4d;
+}
+
+body {
+  background-color: #4d4d4d;
+}
+
+.DrawBoard {
+  background-color: #333333;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  padding: 5%;
+  width: 80vw;
+  border-radius: 20px;
+}
+
+.CanvasStyle {
+  margin: 5%;
+}
+
+.ScaryStyleFontDraw {
+  font-family: 'Creepster', cursive;
+  color: white;
+  font-size: 8vw;
+}
+
+.ScaryStyleFontDrawSub {
+  font-family: 'Creepster', cursive;
+  color: white;
+  font-size: 3vw;
+}
+
+.myPumps {
+  background-color: #e2a624;
+}
+
+.body {
+  background-color: #4d4d4d;
+}
