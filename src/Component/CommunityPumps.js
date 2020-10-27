@@ -22,7 +22,7 @@ const CommunityPumps = props => {
         const getPumps=async()=>{
             let TotalPumps=await window.contract.getTokenHeight()
             let arr=communityArt
-            let Owners=[];
+            let Owners=[];          
             let tokens=[]
             
             for(let i=0;i<3;i++){
