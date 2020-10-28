@@ -42,7 +42,7 @@ export default function App() {
   return (
    <React.Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand className="ScaryStyleFont" href="/">Block '0' Lantern </Navbar.Brand>
+        <Navbar.Brand className="ScaryStyleFont" ><Link to='/'>Block '0' Lantern </Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
