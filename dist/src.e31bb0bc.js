@@ -55057,7 +55057,7 @@ var _config = _interopRequireDefault(require("./config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const nearConfig = (0, _config.default)("development" || 'testnet'); // Initialize contract & set global variables
+const nearConfig = (0, _config.default)("development" || 'mainnet'); // Initialize contract & set global variables
 
 async function initContract() {
   // Initialize connection to the NEAR testnet
@@ -55072,6 +55072,7 @@ async function initContract() {
 
   window.accountId = window.walletConnection.getAccountId();
   window.account = new _nearApiJs.Account(near.connection, accountId);
+  window.nearConfig = nearConfig;
   window.near = near;
   window.makeAccount = _nearApiJs.Account; // Initializing our contract APIs by contract name and configuration
 
@@ -55094,7 +55095,7 @@ function login() {
   // user's behalf.
   // This works by creating a new access key for the user's account and storing
   // the private key in localStorage.
-  window.walletConnection.requestSignIn('');
+  window.walletConnection.requestSignIn('blockolantern.testnet');
 }
 },{"near-api-js":"../node_modules/near-api-js/lib/browser-index.js","./config":"config.js"}],"../node_modules/classnames/index.js":[function(require,module,exports) {
 var define;
@@ -75043,7 +75044,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62590" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65413" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

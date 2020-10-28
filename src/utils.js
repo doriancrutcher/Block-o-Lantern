@@ -1,7 +1,7 @@
 import { connect, Contract, keyStores, WalletConnection, Account } from 'near-api-js'
 import getConfig from './config'
 
-const nearConfig = getConfig(process.env.NODE_ENV || 'testnet')
+const nearConfig = getConfig(process.env.NODE_ENV || 'mainnet')
 
 // Initialize contract & set global variables
 export async function initContract() {
@@ -16,6 +16,8 @@ export async function initContract() {
   window.accountId = window.walletConnection.getAccountId()
 
   window.account = new Account(near.connection, accountId)
+
+  window.nearConfig=nearConfig
 
   window.near = near
 
@@ -43,5 +45,5 @@ export function login() {
   // user's behalf.
   // This works by creating a new access key for the user's account and storing
   // the private key in localStorage.
-  window.walletConnection.requestSignIn(nearConfig.contractName)
+  window.walletConnection.requestSignIn('blockolantern.testnet')
 }
