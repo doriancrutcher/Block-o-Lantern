@@ -1,7 +1,7 @@
-import { connect, Contract, keyStores, WalletConnection,Account } from 'near-api-js'
+import { connect, Contract, keyStores, WalletConnection, Account } from 'near-api-js'
 import getConfig from './config'
 
-const nearConfig = getConfig(process.env.NODE_ENV || 'development')
+const nearConfig = getConfig(process.env.NODE_ENV || 'testnet')
 
 // Initialize contract & set global variables
 export async function initContract() {
@@ -15,18 +15,18 @@ export async function initContract() {
   // Getting the Account ID. If still unauthorized, it's just empty string
   window.accountId = window.walletConnection.getAccountId()
 
-  window.account=new Account(near.connection,accountId)
+  window.account = new Account(near.connection, accountId)
 
-  window.near=near
+  window.near = near
 
-  window.makeAccount=Account;
+  window.makeAccount = Account;
 
   // Initializing our contract APIs by contract name and configuration
   window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
     // View methods are read only. They don't modify the state, but usually return some value.
-    viewMethods: ['getTokenHeight','switchO','get_pumpkin_owner','what','getPumpkinDrawing','getPumpkinInventory'],
+    viewMethods: ['getTokenHeight', 'switchO', 'get_pumpkin_owner', 'what', 'getPumpkinDrawing', 'getPumpkinInventory'],
     // Change methods can modify the state. But you don't receive the returned value when called.
-    changeMethods: ['getTotalPumps','SetDrawing','deletePumpkin','transfer','transfer_from','grant_access','revoke_access','mint_to'],
+    changeMethods: ['getTotalPumps', 'SetDrawing', 'deletePumpkin', 'transfer', 'transfer_from', 'grant_access', 'revoke_access', 'mint_to'],
   })
 }
 
