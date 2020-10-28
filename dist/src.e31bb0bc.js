@@ -55057,7 +55057,7 @@ var _config = _interopRequireDefault(require("./config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const nearConfig = (0, _config.default)("development" || 'mainnet'); // Initialize contract & set global variables
+const nearConfig = (0, _config.default)('testnet'); // Initialize contract & set global variables
 
 async function initContract() {
   // Initialize connection to the NEAR testnet
@@ -74787,10 +74787,7 @@ const PumpkinDrawingBoard = props => {
       DrawRef.current.loadSaveData((0, _lzString.decompressFromUTF16)(localStorage.getItem('myDrawing')), false);
     }
   }, []);
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/draw",
-    exact: true
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "DrawBoard"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: " ScaryStyleFontDraw d-flex justify-content-center"
@@ -74847,7 +74844,7 @@ const PumpkinDrawingBoard = props => {
       to: "/mypumps"
     }),
     disabled: !nearStatus
-  }, "Go to My Pumps to Check out your New Pumpkin!")) : null))));
+  }, "Go to My Pumps to Check out your New Pumpkin!")) : null));
 };
 
 var _default = PumpkinDrawingBoard;
@@ -74944,8 +74941,10 @@ var _YourPumps = _interopRequireDefault(require("./Component/YourPumps"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+//Styling
+//Tools
+//Assets
+//Components
 const {
   networkId
 } = (0, _config.default)("development" || 'development');
@@ -74958,7 +74957,7 @@ function App() {
     });
   };
 
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, {
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, {
     basename: "/"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
@@ -74988,14 +74987,11 @@ function App() {
     exact: true,
     component: _Home.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/Draw",
+    path: "/Draw/",
     exact: true,
-    render: props => /*#__PURE__*/_react.default.createElement(_PumpkinDrawingBoard.default, _extends({}, props, {
-      yo: "ho",
-      goToMyPumps: goToMyPumps
-    }))
+    component: _PumpkinDrawingBoard.default
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/mypumps",
+    path: "/mypumps/",
     exact: true,
     component: _YourPumps.default
   }))));
@@ -75044,7 +75040,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50767" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62395" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

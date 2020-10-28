@@ -82,9 +82,7 @@ const PumpkinDrawingBoard = props => {
     return (
       
 
-      <Router>
 
-         <Route path="/draw" exact>
         <div className="DrawBoard">
           
           <Container>
@@ -127,14 +125,12 @@ const PumpkinDrawingBoard = props => {
 
           
         </div>
-        </Route >
     
 
       
 
 
 
-        </Router>
     );
 };
 

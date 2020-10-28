@@ -62,8 +62,8 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path='/Draw' exact render={(props) => (<PumpkinDrawingBoard {...props} yo='ho' goToMyPumps={goToMyPumps} />)} />
-          <Route path='/mypumps' exact component={YourPumps} />
+          <Route path='/Draw/' exact   component={PumpkinDrawingBoard}/>
+          <Route path='/mypumps/' exact component={YourPumps} />
         </Switch>
       </div>
     </Router>
