@@ -74972,9 +74972,9 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "mr-auto"
   }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
-    href: "/draw"
+    href: "/#draw"
   }, "Draw"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
-    href: "/mypumps"
+    href: "/#mypumps"
   }, "My Pumps"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
     onClick: window.accountId === '' ? _utils.login : _utils.logout,
     eventKey: 2
@@ -74983,15 +74983,15 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true,
-    component: _Home.default
+    render: props => /*#__PURE__*/_react.default.createElement(_Home.default, null)
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/Draw/",
+    path: "/draw",
     exact: true,
-    component: _PumpkinDrawingBoard.default
+    render: props => /*#__PURE__*/_react.default.createElement(_PumpkinDrawingBoard.default, null)
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/mypumps/",
+    path: "/mypumps",
     exact: true,
-    component: _YourPumps.default
+    render: props => /*#__PURE__*/_react.default.createElement(_YourPumps.default, null)
   }))));
 }
 },{"regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","react":"../node_modules/react/index.js","./global.css":"global.css","./scss/AppStyles.scss":"scss/AppStyles.scss","./css/CustomStyles.css":"css/CustomStyles.css","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./utils":"utils.js","react-bootstrap":"../node_modules/react-bootstrap/esm/index.js","./assets/PumpkinHome.png":"assets/PumpkinHome.png","./Component/CommunityPumps":"Component/CommunityPumps.js","./Component/PumpkinDrawingBoard":"Component/PumpkinDrawingBoard.js","./Component/Home.js":"Component/Home.js","./config":"config.js","./Component/YourPumps":"Component/YourPumps.js"}],"index.js":[function(require,module,exports) {
@@ -75010,7 +75010,9 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.nearInitPromise = (0, _utils.initContract)().then(() => {
-  _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null)), document.querySelector('#root'));
+  _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, {
+    basename: "/"
+  }, /*#__PURE__*/_react.default.createElement(_App.default, null)), document.querySelector('#root'));
 }).catch(console.error);
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App":"App.js","./utils":"utils.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -75040,7 +75042,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51992" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54744" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

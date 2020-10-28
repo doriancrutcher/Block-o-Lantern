@@ -49,8 +49,8 @@ export default function App() {
           </Nav>
           <Nav>
 
-            <Nav.Link href="/draw">Draw</Nav.Link>
-            <Nav.Link href="/mypumps">My Pumps</Nav.Link>
+            <Nav.Link href="/#draw">Draw</Nav.Link>
+            <Nav.Link href="/#mypumps">My Pumps</Nav.Link>
             <Nav.Link onClick={(window.accountId === '') ? login : logout} eventKey={2} >
 
               {(window.accountId === '') ? 'Login' : window.accountId}
@@ -61,9 +61,9 @@ export default function App() {
       </Navbar>
       <div className="App">
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path='/Draw/' exact   component={PumpkinDrawingBoard}/>
-          <Route path='/mypumps/' exact component={YourPumps} />
+          <Route path="/" exact render={props=><Home/>} />
+          <Route path='/draw'   exact render={props=><PumpkinDrawingBoard/>}/>
+          <Route path='/mypumps' exact render={props=><YourPumps/>} />
         </Switch>
       </div>
    
