@@ -74958,24 +74958,26 @@ function App() {
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
+    className: "d-flex align-items-center",
     collapseOnSelect: true,
     expand: "lg",
     bg: "dark",
     variant: "dark"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, {
-    className: "ScaryStyleFont",
-    href: "/"
-  }, "Block '0' Lantern "), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
+    className: "ScaryStyleFont"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "Block '0' Lantern ")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, {
     "aria-controls": "responsive-navbar-nav"
   }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "responsive-navbar-nav"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "mr-auto"
-  }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
-    href: "/#draw"
-  }, "Draw"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
-    href: "/#mypumps"
-  }, "My Pumps"), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
+  }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/draw"
+  }, "Draw")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/mypumps"
+  }, "My Pumps")), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
     onClick: window.accountId === '' ? _utils.login : _utils.logout,
     eventKey: 2
   }, window.accountId === '' ? 'Login' : window.accountId)))), /*#__PURE__*/_react.default.createElement("div", {
@@ -75042,7 +75044,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54744" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61177" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
