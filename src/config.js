@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'blockolantern'
+const CONTRACT_NAME = process.env.CONTRACT_NAME ||'blockolantern.testnet'
 
 function getConfig(env) {
   switch (env) {

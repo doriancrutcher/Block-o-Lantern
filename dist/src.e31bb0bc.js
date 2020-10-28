@@ -73280,6 +73280,7 @@ const CommunityPumps = props => {
     }
   }, communityArt.map((x, i) => {
     return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+      key: i,
       className: "d-flex justify-content-center"
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Card, {
       style: {
@@ -75040,7 +75041,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49720" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

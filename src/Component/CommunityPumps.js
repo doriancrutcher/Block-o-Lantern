@@ -76,26 +76,27 @@ useEffect(()=>{
         {communityArt.map((x,i)=>{
             return(
                 
-        <Col className="d-flex justify-content-center">
-        <Card style={{display:'flex',justifyContent:'center'}} className="d-flex justify-content-center" style={{ width: '18rem' }}>
-        <Row className="d-flex justify-content-center">
-        <CanvasDraw
-                  hideGrid
-                  ref={drawRefs[i]}
-                  imgSrc='https://i.imgur.com/NnHp4oS.jpg'
-                  brushColor={'black'}
-                  brushRadius={10}
-                  lazyRadius={0}
-                  canvasWidth={200}
-                  canvasHeight={200}></CanvasDraw>
-        </Row>
-        <Card.Body>
-          <Card.Title>{owners[i]}</Card.Title>
-          <Card.Text>
-            Checkout this user's pumpkin! Token ID: {tokens[i]}
-          </Card.Text>
-        </Card.Body>
-      </Card>
+        <Col key={i} className="d-flex justify-content-center">
+            <Card style={{display:'flex',justifyContent:'center'}} className="d-flex justify-content-center" style={{ width: '18rem' }}>
+                <Row  className="d-flex justify-content-center">
+                    <CanvasDraw
+                            hideGrid
+                            ref={drawRefs[i]}
+                            imgSrc='https://i.imgur.com/NnHp4oS.jpg'
+                            brushColor={'black'}
+                            brushRadius={10}
+                            lazyRadius={0}
+                            canvasWidth={200}
+                            canvasHeight={200}
+                            ></CanvasDraw>
+                </Row>
+            <Card.Body>
+                <Card.Title>{owners[i]}</Card.Title>
+                <Card.Text>
+                    Checkout this user's pumpkin! Token ID: {tokens[i]}
+                </Card.Text>
+            </Card.Body>
+        </Card>
       </Col>
             )
     }) }

@@ -8,11 +8,8 @@ body{
   font-family: 'Creepster', cursive;
 }
 
-@charset "UTF-8";
-body {
-  background-color: black;
-}
 
+@charset "UTF-8";
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -9943,7 +9940,7 @@ body {
 .ScaryStyleFontDraw {
   font-family: 'Creepster', cursive;
   color: white;
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 .ScaryStyleFontDrawSub {
