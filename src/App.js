@@ -41,7 +41,7 @@ export default function App() {
   }
   return (
    <React.Fragment>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar className="d-flex align-items-center" collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand className="ScaryStyleFont" ><Link to='/'>Block '0' Lantern </Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -49,8 +49,9 @@ export default function App() {
           </Nav>
           <Nav>
 
-            <Link to="/draw">Draw</Link>
-            <Link to="/mypumps">My Pumps</Link>
+            <Nav.Link><Link to="/draw">Draw</Link></Nav.Link>
+
+      <Nav.Link><Link to="/mypumps">My Pumps</Link></Nav.Link>
             <Nav.Link onClick={(window.accountId === '') ? login : logout} eventKey={2} >
 
               {(window.accountId === '') ? 'Login' : window.accountId}
