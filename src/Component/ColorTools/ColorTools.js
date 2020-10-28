@@ -18,13 +18,13 @@ const ColorTools = props => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item onClick={()=>{props.changeColor('red')}} href="#/action-1">Red</Dropdown.Item>
-    <Dropdown.Item onClick={()=>{props.changeColor('black')}} href="#/action-2">Black</Dropdown.Item>
-    <Dropdown.Item onClick={()=>{props.changeColor('blue')}} href="#/action-3">Blue</Dropdown.Item>
-    <Dropdown.Item onClick={()=>{props.changeColor('green')}} href="#/action-3">Green</Dropdown.Item>
-    <Dropdown.Item onClick={()=>{props.changeColor('yellow')}} href="#/action-3">Yellow</Dropdown.Item>
-    <Dropdown.Item onClick={()=>{props.changeColor('white')}} href="#/action-3">White</Dropdown.Item>
-    <Dropdown.Item onClick={()=>{props.changeColor('orange')}} href="#/action-3">Orange</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('red')}} >Red</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('black')}} >Black</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('blue')}} >Blue</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('green')}} >Green</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('yellow')}} >Yellow</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('white')}} >White</Dropdown.Item>
+    <Dropdown.Item onClick={()=>{props.changeColor('orange')}} >Orange</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
 
