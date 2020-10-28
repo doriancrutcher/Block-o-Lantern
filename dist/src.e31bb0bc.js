@@ -54973,7 +54973,7 @@ exports.keyStores = __importStar(require("./key_stores/browser-index"));
 __exportStar(require("./common-index"), exports);
 
 },{"./key_stores/browser-index":"../node_modules/near-api-js/lib/key_stores/browser-index.js","./common-index":"../node_modules/near-api-js/lib/common-index.js"}],"config.js":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1603139315676-9101572" || 'blockolantern.testnet';
+const CONTRACT_NAME = "blockolantern.testnet" || 'blockolantern.testnet';
 
 function getConfig(env) {
   switch (env) {
@@ -73236,7 +73236,7 @@ const CommunityPumps = props => {
       let tokens = [];
 
       for (let i = 0; i < 3; i++) {
-        let randomImage = Math.floor(Math.random() * (TotalPumps - 15)) + 15;
+        let randomImage = Math.floor(Math.random() * (TotalPumps - 1) + 1);
         let x = window.contract.getPumpkinDrawing({
           token_id: randomImage
         });
@@ -74958,7 +74958,7 @@ function App() {
     });
   };
 
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, {
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, {
     basename: "/"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
@@ -75044,7 +75044,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50767" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

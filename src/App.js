@@ -8,7 +8,7 @@ import './css/CustomStyles.css'
 
 //Tools
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link,

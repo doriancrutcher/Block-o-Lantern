@@ -119,7 +119,12 @@ export function getPumpkinInventory(owner:string):i32[] {
 }
 
 export function getTokenHeight():i32{
+  if(storage.contains(Total_Supply)){
   return storage.getSome<i32>(Total_Supply)
+  }
+  else{
+    return 0
+  }
 }
 
 export function SetDrawing(token_id:i32,drawing:string):void{
