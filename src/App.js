@@ -50,7 +50,7 @@ export default function App() {
           <Nav>
 
             <Link to="/draw">Draw</Link>
-            <Nav.Link href="/#mypumps">My Pumps</Nav.Link>
+            <Link to="/mypumps">My Pumps</Link>
             <Nav.Link onClick={(window.accountId === '') ? login : logout} eventKey={2} >
 
               {(window.accountId === '') ? 'Login' : window.accountId}
