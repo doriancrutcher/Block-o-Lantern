@@ -40,7 +40,7 @@ export default function App() {
     return <Redirect to='/mypumps' />
   }
   return (
-    <Router basename='/'>
+   <React.Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand className="ScaryStyleFont" href="/">Block '0' Lantern </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -66,8 +66,8 @@ export default function App() {
           <Route path='/mypumps/' exact component={YourPumps} />
         </Switch>
       </div>
-    </Router>
-
+   
+      </React.Fragment>
 
   )
 }
